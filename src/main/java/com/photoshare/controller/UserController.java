@@ -22,19 +22,19 @@ import javax.servlet.ServletException;
 public class UserController {
 
 
-	@Autowired
-    private UserService userService;
+	   @Autowired
+       private UserService userService;
 	
-	@RequestMapping(value="register", method=RequestMethod.POST)
-	public User registerUser(@RequestBody User user) {
+	   @RequestMapping(value="register", method=RequestMethod.POST)
+	   public User registerUser(@RequestBody User user) {
 		  
-		return userService.save(user);
+	        	return userService.save(user);
 		
-	}
+	   }
 	
 	
 	
-	  @RequestMapping(value="login", method = RequestMethod.POST)
+	    @RequestMapping(value="login", method = RequestMethod.POST)
 	    public String login(@RequestBody Map<String, String> json) throws ServletException {
 	        if(json.get("username") == null || json.get("password") == null) {
 	            throw new ServletException("Please fill in username and password");
