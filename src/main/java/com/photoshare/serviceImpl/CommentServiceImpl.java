@@ -26,6 +26,7 @@ public class CommentServiceImpl implements CommentService{
 	public Comment findOne(Long commentId) {
 		// TODO Auto-generated method stub
 		return commentDao.findOne(commentId);
+		
 	}
 
 	@Override

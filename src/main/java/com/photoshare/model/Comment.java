@@ -10,9 +10,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Comment {
+	
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long commetId;
+    private Long commentId;
 
     private String coment;
 
@@ -26,10 +28,10 @@ public class Comment {
     
     
 	public Long getCommetId() {
-		return commetId;
+		return commentId;
 	}
 	public void setCommetId(Long commetId) {
-		this.commetId = commetId;
+		this.commentId = commetId;
 	}
 	public String getComent() {
 		return coment;

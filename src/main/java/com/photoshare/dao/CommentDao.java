@@ -9,6 +9,7 @@ import com.photoshare.model.Comment;
 
 @Repository
 public interface CommentDao extends CrudRepository<Comment, Long> {
+	
 	Comment save(Comment comment);
 	
 	Comment findOne(Long commentId);
